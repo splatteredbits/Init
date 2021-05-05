@@ -1,0 +1,32 @@
+{
+    "packages": {
+        "winget": [
+            "Microsoft.PowerToys",
+            "Microsoft.WindowsTerminal",
+            "AutoHotkey",
+            "WinDirStat",
+            {
+                "name": "ConEmu",
+                "listId": "{95A0D585-B113-4E3F-998E-317F7C3FE06A}"
+            }
+        ],
+        "powershellModules": [
+            "posh-git"
+        ],
+
+        "appx": [
+            {
+                "name": "22324SteveMiller.PureText",
+                "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/7486d0d3-03ee-4279-8ec9-db36ccf36c5d?P1=1620252913&P2=404&P3=2&P4=XRMNT6gwALbu0YnKespCROQgJwx6dSPQbmlSdsK%2bpFWdIhwD%2beYnkx9h3jn1f5PVj7n2r%2bBPDqoYUd0t2Hw%2bRg%3d%3d",
+                "isBundle": true
+            }
+        ]
+    },
+
+    "profiles": [
+        {
+            "shell": "powershell",
+            "source": "powershell.profile.ps1"
+        }
+    ]
+}
