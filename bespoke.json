@@ -8,8 +8,15 @@
             {
                 "name": "ConEmu",
                 "listId": "{95A0D585-B113-4E3F-998E-317F7C3FE06A}"
-            }
+            },
+            {
+                "name": "Visual Studio Code",
+                "installId": "Microsoft.VisualStudioCode.User-x64",
+                "listId": "{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1"
+            },
+            "1Password"
         ],
+
         "powershellModules": [
             "posh-git"
         ],
@@ -19,6 +26,16 @@
                 "name": "22324SteveMiller.PureText",
                 "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/7486d0d3-03ee-4279-8ec9-db36ccf36c5d?P1=1620252913&P2=404&P3=2&P4=XRMNT6gwALbu0YnKespCROQgJwx6dSPQbmlSdsK%2bpFWdIhwD%2beYnkx9h3jn1f5PVj7n2r%2bBPDqoYUd0t2Hw%2bRg%3d%3d",
                 "isBundle": true
+            }
+        ],
+
+        "zip": [
+            {
+                "$if": "$IsWindows",
+                "url": "https://d2l2g77p7dyozs.cloudfront.net/ASGRD2019_Patch6_x64_Setup.zip",
+                "installer": "ASGRD_x64_Setup.exe",
+                "checksum": "20a9ddd26b83834b696b2b4cc832ad51e181b53fd6a65500307cae4d9992c713",
+                "programName": "ASG-Remote Desktop 2019 (X64)"
             }
         ]
     },
