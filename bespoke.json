@@ -14,7 +14,8 @@
                 "installId": "Microsoft.VisualStudioCode.User-x64",
                 "listId": "{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1"
             },
-            "1Password"
+            "1Password",
+            "LastPass"
         ],
 
         "powershellModules": [
@@ -36,6 +37,14 @@
                 "installer": "ASGRD_x64_Setup.exe",
                 "checksum": "20a9ddd26b83834b696b2b4cc832ad51e181b53fd6a65500307cae4d9992c713",
                 "programName": "ASG-Remote Desktop 2019 (X64)"
+            }
+        ],
+
+        "exe": [
+            {
+                "name": "Apple iCloud",
+                "url": "http://updates-http.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe",
+                "checksum": ""
             }
         ]
     },
