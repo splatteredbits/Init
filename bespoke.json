@@ -88,6 +88,14 @@
         }
     ],
 
+    "font": [
+        {
+            "url": "https://download.jetbrains.com/fonts/JetBrainsMono-2.225.zip",
+            "checksum": "sha256:03b2e2c0e3285703a204b6efbe2d277bf568e0bb53a395e9f4e74e9b77c4aeb2",
+            "exclude": [ "JetBrainsMono-Regular.ttf", "JetBrainsMono-Italic.ttf" ]
+        }
+    ],
+
     "profile": [
         {
             "shell": "powershell",
