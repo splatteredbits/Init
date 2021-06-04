@@ -10,6 +10,12 @@
             "link": "~Startup~\\ExpandWindowsAcrossMonitors.Win+Shift+Up.ahk",
             "target": "ExpandWindowsAcrossMonitors.Win+Shift+Up.ahk",
             "invoke": true
+        },
+        {
+            "$if": "$IsWindows",
+            "type": "HardLink",
+            "link": "~ApplicationData~\\ConEmu.xml",
+            "target": "ConEmu.xml"
         }
     ],
     
