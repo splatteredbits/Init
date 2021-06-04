@@ -23,74 +23,72 @@
         "expandEnvironmentNames": true
     },
 
-    "packages": {
-        "winget": [
-            "Microsoft.PowerToys",
-            "Microsoft.WindowsTerminal",
-            "AutoHotkey",
-            "WinDirStat",
-            {
-                "name": "ConEmu",
-                "listId": "{95A0D585-B113-4E3F-998E-317F7C3FE06A}"
-            },
-            {
-                "name": "Visual Studio Code",
-                "installId": "Microsoft.VisualStudioCode.User-x64",
-                "listId": "{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1"
-            },
-            "1Password",
-            "LastPass"
-        ],
+    "winget": [
+        "Microsoft.PowerToys",
+        "Microsoft.WindowsTerminal",
+        "AutoHotkey",
+        "WinDirStat",
+        {
+            "name": "ConEmu",
+            "listId": "{95A0D585-B113-4E3F-998E-317F7C3FE06A}"
+        },
+        {
+            "name": "Visual Studio Code",
+            "installId": "Microsoft.VisualStudioCode.User-x64",
+            "listId": "{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1"
+        },
+        "1Password",
+        "LastPass"
+    ],
 
-        "powershellModules": [
-            "posh-git"
-        ],
+    "powershellModules": [
+        "posh-git"
+    ],
 
-        "appx": [
-            {
-                "name": "22324SteveMiller.PureText",
-                "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/7486d0d3-03ee-4279-8ec9-db36ccf36c5d?P1=1620252913&P2=404&P3=2&P4=XRMNT6gwALbu0YnKespCROQgJwx6dSPQbmlSdsK%2bpFWdIhwD%2beYnkx9h3jn1f5PVj7n2r%2bBPDqoYUd0t2Hw%2bRg%3d%3d",
-                "isBundle": true
-            }
-        ],
+    "appx": [
+        {
+            "name": "22324SteveMiller.PureText",
+            "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/7486d0d3-03ee-4279-8ec9-db36ccf36c5d?P1=1620252913&P2=404&P3=2&P4=XRMNT6gwALbu0YnKespCROQgJwx6dSPQbmlSdsK%2bpFWdIhwD%2beYnkx9h3jn1f5PVj7n2r%2bBPDqoYUd0t2Hw%2bRg%3d%3d",
+            "isBundle": true
+        }
+    ],
 
-        "msi": [
-            {
-                "url": "https://d2l2g77p7dyozs.cloudfront.net/ASGRD2019_Patch6_x64_Setup.zip",
-                "archiveInstallerPath": "ASGRD_x64_Setup.exe",
-                "checksum": "sha256:20a9ddd26b83834b696b2b4cc832ad51e181b53fd6a65500307cae4d9992c713",
-                "programName": "ASG-Remote Desktop 2019 (X64)"
-            },
-            {
-                "name": "Apple iCloud",
-                "url": "http://updates-http.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe",
-                "checksum": "sha256:4cfd20d13cdce2b5c435f2ddaf4ee4c81d976461846bf3b954e8af6cbcdeb9f7",
-                "programName": "iCloud"
-            }
-        ],
+    "msi": [
+        {
+            "url": "https://d2l2g77p7dyozs.cloudfront.net/ASGRD2019_Patch6_x64_Setup.zip",
+            "archiveInstallerPath": "ASGRD_x64_Setup.exe",
+            "checksum": "sha256:20a9ddd26b83834b696b2b4cc832ad51e181b53fd6a65500307cae4d9992c713",
+            "programName": "ASG-Remote Desktop 2019 (X64)"
+        },
+        {
+            "name": "Apple iCloud",
+            "url": "http://updates-http.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe",
+            "checksum": "sha256:4cfd20d13cdce2b5c435f2ddaf4ee4c81d976461846bf3b954e8af6cbcdeb9f7",
+            "programName": "iCloud"
+        }
+    ],
 
-        "zip": [
-            {
-                "$if": "$IsWindows",
-                "url": "https://releases.hashicorp.com/terraform/0.15.3/terraform_0.15.3_windows_amd64.zip",
-                "destination": "~\\bin",
-                "checksum": "sha256:960fc4f9689a03f11a411f2604033479c27b3a3177f1c5ca21b9ca7fda254c24",
-                "items": [
-                    {
-                        "path": "terraform.exe",
-                        "checksum": "sha256:3b14c614768ad2562d0c987673bd1f75d023585351b1ae5ad131883681f26da1"
-                    }
-                ]
-            },
-            {
-                "$if": "$IsWindows",
-                "url": "https://download.sysinternals.com/files/SysinternalsSuite.zip",
-                "destination": "C:\\Sysinternals"
-            }
-        ]
-    },
+    "zip": [
+        {
+            "$if": "$IsWindows",
+            "url": "https://releases.hashicorp.com/terraform/0.15.3/terraform_0.15.3_windows_amd64.zip",
+            "destination": "~\\bin",
+            "checksum": "sha256:960fc4f9689a03f11a411f2604033479c27b3a3177f1c5ca21b9ca7fda254c24",
+            "items": [
+                {
+                    "path": "terraform.exe",
+                    "checksum": "sha256:3b14c614768ad2562d0c987673bd1f75d023585351b1ae5ad131883681f26da1"
+                }
+            ]
+        },
+        {
+            "$if": "$IsWindows",
+            "url": "https://download.sysinternals.com/files/SysinternalsSuite.zip",
+            "destination": "C:\\Sysinternals"
+        }
+    ],
 
-    "profiles": [
+    "profile": [
         {
             "shell": "powershell",
             "source": "powershell.profile.ps1"
