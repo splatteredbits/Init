@@ -44,11 +44,13 @@
             "listId": "{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1"
         },
         "1Password",
-        "LastPass"
+        "LastPass",
+        "Docker.DockerDesktop"
     ],
 
     "powershellModules": [
-        "posh-git"
+        "posh-git",
+        "PersistentHistory"
     ],
 
     "appx": [
@@ -71,7 +73,21 @@
             "url": "http://updates-http.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe",
             "checksum": "sha256:4cfd20d13cdce2b5c435f2ddaf4ee4c81d976461846bf3b954e8af6cbcdeb9f7",
             "programName": "iCloud"
+        },
+        {
+            "name": "Macrium Reflect",
+            "url": "https://updates.macrium.com/reflect/v8/ReflectDLHF.exe",
+            "checksum": "sha256:0f797950a5321c577a71de4ec1bab9557553993034506d98c65d61da0db767e0"
         }
+    ],
+
+    "windowsCapability": [
+        "Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0",
+        "Rsat.ServerManager.Tools~~~~0.0.1.0"
+    ],
+
+    "windowsFeature": [
+        "Microsoft-Hyper-V-All"
     ],
 
     "zip": [
