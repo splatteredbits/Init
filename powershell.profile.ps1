@@ -69,6 +69,8 @@ if( $isAdmin )
 
 function prompt
 {
+    # Write-Host 'PS>' -NoNewline
+    # return ' '
     Set-StrictMode -Version 'Latest'
 
     $realLastExistCode = $global:LASTEXITCODE
@@ -84,22 +86,24 @@ function prompt
 	    }
 
 	    $nextCommand = $lastId + 1
-	    $currentDirectory = Get-Location
         Get-Location | Select-Object -ExpandProperty Path | Out-File -FilePath $lastLocationFilePath -Encoding OEM
 
-        if( (git rev-parse HEAD 2>$null) )
+        $prompt = [Text.StringBuilder]::New()
+        $vcsStatus = Write-VcsStatus
+        if( $vcsStatus )
         {
-            Write-VcsStatus
+            [void]$prompt.AppendLine($vcsStatus.TrimStart())
         }
 
-        Write-Host ''
-        Write-Host -NoNewline ' '
-        Write-Host $nextCommand -NoNewline -ForegroundColor Gray
-        Write-host ' ' -NoNewline
-        Write-Host($pwd.ProviderPath) -nonewline -ForegroundColor DarkCyan
-        Write-Host ' ' -NoNewline
-        Write-Host $promptChar -NoNewline -ForegroundColor Gray
-        return ' '
+
+        $prompt | Write-Prompt $nextCommand -ForegroundColor Gray
+        $prompt | Write-Prompt ' '
+        $prompt | Write-Prompt $pwd.ProviderPath -ForegroundColor DarkCyan
+        $prompt | Write-Prompt ' '
+        $prompt | Write-Prompt $promptChar -ForegroundColor White
+        $prompt | Write-Prompt ' '
+
+        return $prompt.ToString()
     }
     finally
     {
