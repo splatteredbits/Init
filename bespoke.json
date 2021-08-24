@@ -16,6 +16,12 @@
             "type": "HardLink",
             "link": "~ApplicationData~\\ConEmu.xml",
             "target": "ConEmu.xml"
+        },
+        {
+            "$if": "$IsWindows",
+            "type": "HardLink",
+            "link": "~MyDocuments~\\PowerShell\\profile.ps1",
+            "target": "powershell.profile.ps1"
         }
     ],
     
@@ -44,8 +50,15 @@
             "listId": "{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1"
         },
         "1Password",
-        "LastPass",
-        "Docker.DockerDesktop"
+        {
+            "name": "LastPass",
+            "id": "LogMeIn.LastPass"
+        },
+        {
+            "name": "Docker Desktop",
+            "listId": "Docker.DockerDesktop"
+        },
+        "Microsoft.PowerShell"
     ],
 
     "powershellModules": [
@@ -93,9 +106,9 @@
     "zip": [
         {
             "$if": "$IsWindows",
-            "url": "https://releases.hashicorp.com/terraform/0.15.3/terraform_0.15.3_windows_amd64.zip",
+            "url": "https://releases.hashicorp.com/terraform/1.0.5/terraform_1.0.5_windows_amd64.zip",
             "destination": "~\\bin",
-            "checksum": "sha256:960fc4f9689a03f11a411f2604033479c27b3a3177f1c5ca21b9ca7fda254c24",
+            "checksum": "sha256:37de2cd8153286e41b029a719f03b747058cda09576e3297d3d24e1d30e27a12",
             "items": [
                 {
                     "path": "terraform.exe",

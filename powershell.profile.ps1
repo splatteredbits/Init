@@ -2,6 +2,11 @@
 $Host.PrivateData.VerboseForegroundColor = [ConsoleColor]::DarkCyan
 $Host.PrivateData.DebugForegroundColor = [ConsoleColor]::DarkGray
 
+if( $PSVersionTable['PSEdition'] -eq 'Core' )
+{
+    $env:PSModulePath = "$(Resolve-Path -Path "~\Documents\WindowsPowerShell\Modules");$($env:PSModulePath)"
+}
+
 $InformationPreference = 'Continue'
 
 $lastLocationFilePath = Split-Path -Parent -Path $profile
@@ -62,9 +67,11 @@ if( $identity )
 }
 
 $promptChar = '$'
+$promptColor = 'White'
 if( $isAdmin )
 {
     $promptChar = '#'
+    $promptColor = 'DarkRed'
 }
 
 function prompt
@@ -100,7 +107,7 @@ function prompt
         $prompt | Write-Prompt ' '
         $prompt | Write-Prompt $pwd.ProviderPath -ForegroundColor DarkCyan
         $prompt | Write-Prompt ' '
-        $prompt | Write-Prompt $promptChar -ForegroundColor White
+        $prompt | Write-Prompt $promptChar -ForegroundColor $promptColor
         $prompt | Write-Prompt ' '
 
         return $prompt.ToString()
